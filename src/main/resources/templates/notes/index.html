@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+</head>
+<body>
+<h1>Notes</h1>
+<ul>
+    <th:block th:each="note : ${notes}">
+        <li th:text="${note.note}"></li>
+    </th:block>
+</ul>
+<a th:href="@{/notes/new}">Add New Note</a>
+</body>
+</html>
