@@ -8,7 +8,9 @@
 <h1>Notes</h1>
 <ul>
     <th:block th:each="note : ${notes}">
-        <li th:text="${note.note}"></li>
+        <li>
+            <a th:href="@{/notes/{id}(id=${note.id})}" th:text="${note.note}"></a>
+        </li>
     </th:block>
 </ul>
 <a th:href="@{/notes/new}">Add New Note</a>
