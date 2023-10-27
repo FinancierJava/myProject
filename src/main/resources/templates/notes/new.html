@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <title>Add New Note</title>
 </head>
 <body>
 <h1>Add New Note</h1>
 <form action="/notes" method="post" th:object="${webNote}">
-  <label for="note">Note:</label>
-  <input type="text" id="note" name="note" th:field="*{note}" required>
-  <button type="submit">Add Note</button>
+  <div class="form-container">
+    <div class="form-group">
+      <label for="note">Note:</label>
+      <input type="text" id="note" name="note" th:field="*{note}" required>
+    </div>
+    <button type="submit">Add Note</button>
+  </div>
 </form>
 <a th:href="@{/notes}">Back to Notes</a>
 </body>
